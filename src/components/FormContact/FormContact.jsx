@@ -8,7 +8,7 @@ import { BsFillTelephonePlusFill } from 'react-icons/bs';
 import { MdContactPhone } from 'react-icons/md';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/contactSlice';
+import { addContact } from 'redux/operations';
 import { toast } from 'react-toastify';
 
 

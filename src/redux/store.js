@@ -13,7 +13,6 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { contactsReducer } from './contactSlice';
-import { filterReducer } from './filterSlice.js';
 
 // об'єкт налаштувань, в якому записані, які дані зберігати в Local Storage
 const contactsConfig = {
@@ -24,7 +23,6 @@ const contactsConfig = {
 export const store = configureStore({
   reducer: {
     contacts: persistReducer(contactsConfig, contactsReducer),
-    filter: filterReducer,
   },
 
   middleware: getDefaultMiddleware =>
