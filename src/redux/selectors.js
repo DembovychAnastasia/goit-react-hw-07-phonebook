@@ -1,4 +1,5 @@
 import { createSelector } from '@reduxjs/toolkit';
+// import toast from 'react-hot-toast';
 
 export const selectContacts = state => state.contacts.items;
 export const selectIsLoading = state => state.contacts.isLoading;
@@ -10,6 +11,8 @@ export const selectFilteredContacts = createSelector(
   (contacts, filter) => {
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(filter.toLowerCase())
-    );
+    )
+   
+   
   }
 );
